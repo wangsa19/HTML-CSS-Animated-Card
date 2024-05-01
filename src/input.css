@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eeeeea;
+}
+
+.wrapper {
+  @apply w-full h-svh flex items-center justify-center;
+}
+
+.container {
+  @apply h-[400px] flex flex-nowrap justify-start;
+}
+
+.card {
+  @apply w-[80px] rounded-[40px] bg-cover cursor-pointer overflow-hidden mx-[10px] flex items-end transition-all shadow-2xl;
+}
+
+.card>.row {
+  @apply text-white flex flex-nowrap;
+}
+
+.card>.row>.icon {
+  @apply bg-[#223] text-white rounded-full flex justify-center items-center w-12 h-12 m-[15px];
+}
+
+.card>.row>.description {
+  @apply flex justify-center flex-col overflow-hidden h-[80px] w-[520px] opacity-0 translate-y-[30px] delay-300 transition-all;
+}
+
+.description p {
+  @apply text-[#b0b0ba] pt-[5px];
+}
+
+.description h4 {
+  @apply uppercase;
+}
+
+input:checked+label {
+  @apply w-[600px];
+}
+
+input:checked+label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  @apply bg-[url('img/1.jpeg')];
+}
+
+.card[for="c2"] {
+  @apply bg-[url('img/2.jpeg')];
+}
+
+.card[for="c3"] {
+  @apply bg-[url('img/3.jpeg')];
+}
+
+.card[for="c4"] {
+  @apply bg-[url('img/4.jpeg')];
+}
